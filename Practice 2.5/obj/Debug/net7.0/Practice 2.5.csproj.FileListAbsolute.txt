@@ -1,0 +1,19 @@
+F:\Practice 2\Practice 2.5\bin\Debug\net7.0\Practice 2.5.exe
+F:\Practice 2\Practice 2.5\bin\Debug\net7.0\Practice 2.5.deps.json
+F:\Practice 2\Practice 2.5\bin\Debug\net7.0\Practice 2.5.runtimeconfig.json
+F:\Practice 2\Practice 2.5\bin\Debug\net7.0\Practice 2.5.dll
+F:\Practice 2\Practice 2.5\bin\Debug\net7.0\Practice 2.5.pdb
+F:\Practice 2\Practice 2.5\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\Practice 2\Practice 2.5\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+F:\Practice 2\Practice 2.5\bin\Debug\net7.0\Npgsql.dll
+F:\Practice 2\Practice 2.5\obj\Debug\net7.0\Practice 2.5.csproj.AssemblyReference.cache
+F:\Practice 2\Practice 2.5\obj\Debug\net7.0\Practice 2.5.GeneratedMSBuildEditorConfig.editorconfig
+F:\Practice 2\Practice 2.5\obj\Debug\net7.0\Practice 2.5.AssemblyInfoInputs.cache
+F:\Practice 2\Practice 2.5\obj\Debug\net7.0\Practice 2.5.AssemblyInfo.cs
+F:\Practice 2\Practice 2.5\obj\Debug\net7.0\Practice 2.5.csproj.CoreCompileInputs.cache
+F:\Practice 2\Practice 2.5\obj\Debug\net7.0\Practice 2.5.csproj.CopyComplete
+F:\Practice 2\Practice 2.5\obj\Debug\net7.0\Practice 2.5.dll
+F:\Practice 2\Practice 2.5\obj\Debug\net7.0\refint\Practice 2.5.dll
+F:\Practice 2\Practice 2.5\obj\Debug\net7.0\Practice 2.5.pdb
+F:\Practice 2\Practice 2.5\obj\Debug\net7.0\Practice 2.5.genruntimeconfig.cache
+F:\Practice 2\Practice 2.5\obj\Debug\net7.0\ref\Practice 2.5.dll
