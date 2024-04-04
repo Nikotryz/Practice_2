@@ -13,6 +13,38 @@ public static class DatabaseRequests
         cmd.ExecuteNonQuery();
     }
     
+    //Метод удаления задачи из БД
+    public static void DeleteTaskQuery(int id)
+    {
+        var querySql = $"DELETE FROM task WHERE id = {id}";
+        using var cmd = new NpgsqlCommand(querySql, DatabaseService.GetSqlConnection());
+        cmd.ExecuteNonQuery();
+    }
+    
+    //Метод изменения названия задачи в БД
+    public static void EditTaskNameQuery(int id, string name)
+    {
+        var querySql = $"UPDATE task SET name = '{name}' WHERE id = {id}";
+        using var cmd = new NpgsqlCommand(querySql, DatabaseService.GetSqlConnection());
+        cmd.ExecuteNonQuery();
+    }
+    
+    //Метод изменения описания задачи в БД
+    public static void EditTaskDescriptionQuery(int id, string description)
+    {
+        var querySql = $"UPDATE task SET description = '{description}' WHERE id = {id}";
+        using var cmd = new NpgsqlCommand(querySql, DatabaseService.GetSqlConnection());
+        cmd.ExecuteNonQuery();
+    }
+    
+    //Метод изменения дедлайна задачи в БД
+    public static void EditTaskDeadlineQuery(int id, DateTime date)
+    {
+        var querySql = $"UPDATE task SET deadline = '{date}' WHERE id = {id}";
+        using var cmd = new NpgsqlCommand(querySql, DatabaseService.GetSqlConnection());
+        cmd.ExecuteNonQuery();
+    }
+    
     //Метод получения всех задач из БД
     public static void GetAllTasksQuery()
     {

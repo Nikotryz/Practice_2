@@ -20,7 +20,7 @@ public class DailyPlanner
                               "\n[6] — Просмотреть задачи на неделю" +
                               "\n\nКОМАНДЫ УПРАВЛЕНИЯ:" +
                               "\n[7] — Добавить новую задачу" +
-                              "\n[8] — Отредактировать существующую задачу" +
+                              "\n[8] — Отредактировать задачу" +
                               "\n[9] — Удалить задачу" +
                               "\n\n[stop] — ЗАКРЫТЬ ПРОГРАММУ");
             Console.Write("\nВВЕДИТЕ КОМАНДУ: ");
@@ -38,6 +38,8 @@ public class DailyPlanner
                 case "5": Command.GetTomorrowTasks(); break;
                 case "6": Command.GetWeekTasks(); break;
                 case "7": Command.AddTask(); break;
+                case "8": Command.EditTask(); break;
+                case "9": Command.DeleteTask(); break;
                 case "stop": flag = false; break;
             }
         }

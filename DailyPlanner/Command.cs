@@ -12,10 +12,72 @@ public static class Command
             string name = Console.ReadLine();
             Console.Write("ВВЕДИТЕ ОПИСАНИЕ ЗАДАЧИ (можете оставить поле пустым): ");
             string description = Console.ReadLine();
-            Console.Write("ВВЕДИТЕ ДЕДЛАЙН ЗАДАЧИ: ");
+            Console.Write("ВВЕДИТЕ ДЕДЛАЙН ЗАДАЧИ (YYYY.MM.DD): ");
             string deadline = Console.ReadLine();
             
             DatabaseRequests.AddTaskQuery(name, description, DateTime.Parse(deadline));
+            
+            Console.WriteLine("\nЗАДАЧА УСПЕШНО ДОБАВЛЕНА");
+        }
+        catch (FormatException)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("ОШИБКА. НЕПРАВИЛЬНЫЙ ФОРМАТ ВВОДА");
+        }
+    }
+    
+    //Функция удаления задачи
+    public static void DeleteTask()
+    {
+        try
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("ВВЕДИТЕ ID ЗАДАЧИ: ");
+            int id = int.Parse(Console.ReadLine());
+            
+            DatabaseRequests.DeleteTaskQuery(id);
+            
+            Console.WriteLine("\nЗАДАЧА УСПЕШНО УДАЛЕНА");
+        }
+        catch (FormatException)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("ОШИБКА. НЕПРАВИЛЬНЫЙ ФОРМАТ ВВОДА");
+        }
+    }
+    
+    //Функция изменения задачи
+    public static void EditTask()
+    {
+        try
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("ВВЕДИТЕ ID ЗАДАЧИ: ");
+            int id = int.Parse(Console.ReadLine());
+            Console.Write("ВЫБЕРИТЕ ДЕЙСТВИЕ:\n[1] — Изменить название задачи\n[2] — Изменить описание задачи\n[3] — Изменить дедлайн задачи\n\nВВЕДИТЕ ДЕЙСТВИЕ: ");
+            int action = int.Parse(Console.ReadLine());
+
+            switch (action)
+            {
+                case 1:
+                    Console.Write("ВВЕДИТЕ НОВОЕ НАЗВАНИЕ: ");
+                    string name = Console.ReadLine();
+                    DatabaseRequests.EditTaskNameQuery(id, name);
+                    Console.WriteLine("\nНАЗВАНИЕ ОБНОВЛЕНО");
+                    break;
+                case 2:
+                    Console.Write("ВВЕДИТЕ НОВОЕ ОПИСАНИЕ: ");
+                    string description = Console.ReadLine();
+                    DatabaseRequests.EditTaskDescriptionQuery(id, description);
+                    Console.WriteLine("\nОПИСАНИЕ ОБНОВЛЕНО");
+                    break;
+                case 3:
+                    Console.Write("ВВЕДИТЕ НОВЫЙ ДЕДЛАЙН (YYYY.MM.DD): ");
+                    DateTime deadline = DateTime.Parse(Console.ReadLine());
+                    DatabaseRequests.EditTaskDeadlineQuery(id, deadline);
+                    Console.WriteLine("\nДЕДЛАЙН ОБНОВЛЕН");
+                    break;
+            }
         }
         catch (FormatException)
         {
